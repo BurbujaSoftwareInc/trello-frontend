@@ -85,6 +85,7 @@ function Home() {
          <Grid item xs={12}>
             <h3>/getProyectos</h3>
             <Grid container direction="row" justifyContent="center" alignItems="center">
+               {/* La función map ejecuta una función al arreglo MisProyecto por cada elemento, ie, en cada elemento mappea un elemento JSX con los datos de MiProyecto */}
                {misProyectos.proyectos.map((proyecto) => (
                   <Grid item xs={12}>
                      <h4>ID: {proyecto.idProyecto}</h4>
