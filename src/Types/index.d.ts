@@ -12,14 +12,14 @@ export type Perfil = {
 };
 
 export type Proyecto = {
-   idProyecto?: number;
-   nombre?: string;
-   fechaInicio?: Date;
+   idProyecto: number;
+   nombre: string;
+   fechaInicio: Date;
    fechaFin?: Date | null;
 };
 
 export type Recurso = {
-   idRecurso?: number;
+   idRecurso: number;
    idProyecto?: number;
    idPerfil?: number;
 };
@@ -43,3 +43,6 @@ export type Session = {
    token: boolean,
    url: string
 }
+
+// Esto se le llama intersección, queremos un tipo que tenga los datos del proyecto y el idRecurso, entonces combina los atributos de los dos tipos
+export type MiProyecto = Proyecto & Recurso;
