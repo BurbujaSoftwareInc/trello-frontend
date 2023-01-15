@@ -3,11 +3,10 @@ import { Button, Grid, TextField } from "@mui/material";
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../App/store";
-import { Proyecto } from "../Types";
+import { Proyecto, MiProyecto } from "../Types";
 import { setMisProyectos, addProyecto } from "../Redux/MisProyectosSlice";
 import { ProgressBar } from "react-loader-spinner";
 import Swal from "sweetalert2";
-import { MiProyecto } from "../Types";
 
 function Home() {
    const dispatch = useDispatch();
@@ -131,7 +130,7 @@ function Home() {
                         });
                      } else {
                         // como el back se encarga de mandar los datos si y solo si se guarda correctamente en la base, entonces ya podemos asumir que el proyecto y el idRecurso recien creado existen
-                        // Guardamos el proyecto a la lista de mis proyectos
+                        // Guardamos el proyecto a la lista de mis proyectos, esto es creando un objeto de Tipo MiProyecto que pide, además de los atributos de proyecto, un idRecurso, que el back ya no los manda
                         const miProyecto: MiProyecto = {
                            idRecurso: idRecurso as number,
                            nombre: (proyecto as Proyecto).nombre,
