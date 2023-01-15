@@ -1,12 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import SessionReducer from "../features/tasks/Slice"
-import tokenReducer from "../features/tasks/TokenSlice";
-
+import SessionReducer from "../Redux/SessionSlice";
 
 export const store = configureStore({
     reducer: {
         session: SessionReducer,
-        token: tokenReducer
     }
 })
 
