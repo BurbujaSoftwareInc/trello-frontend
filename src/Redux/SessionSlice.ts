@@ -3,7 +3,7 @@ import { Session } from "../Types";
 
 const initialState: Session = {
    token: false,
-   url: "https://0484-2806-2f0-9100-c689-535f-7d7b-d701-29fa.ngrok.io"
+   url: "http://localhost:8080"
 }
 
 export const SessionSlice = createSlice({
